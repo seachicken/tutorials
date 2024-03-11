@@ -32,7 +32,7 @@ public class UsersService {
     private JmsSender jmsSender;
 
     public UserRecord getUserById(String id) {
-        return usersRepository.findById(id)
+        return usersRepository.findById("a_" + id)
             .orElseThrow(() -> new UnknownUserException(id));
     }
 
